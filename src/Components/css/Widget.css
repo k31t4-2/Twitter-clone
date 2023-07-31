@@ -1,0 +1,41 @@
+.widgets {
+  -webkit-box-flex: 0.35;
+  -webkit-flex: 0.35;
+      -ms-flex: 0.35;
+          flex: 0.35;
+  padding: 10px 20px;
+}
+.widgets__input {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: none;
+  border-radius: 50px;
+  padding: 10px;
+  background-color: var(--twitter-background);
+}
+.widgets__input-searchIcon {
+  padding-right: 10px;
+}
+.widgets__input input {
+  border: none;
+  background-color: var(--twitter-background);
+  font-size: 16px;
+  outline: none;
+}
+.widgets__widgetsContainer {
+  background-color: #f5f8fa;
+  border-radius: 20px;
+  padding: 20px;
+  margin-top: 10px;
+}
+.widgets__widgetsContainer h2 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 800;
+}
