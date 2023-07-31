@@ -1,0 +1,27 @@
+.sidebarMenu {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  -webkit-transition: all 0.1s;
+  transition: all 0.1s;
+  margin-left: 16px;
+}
+.sidebarMenu:hover {
+  background-color: #e8f5fe;
+  border-radius: 30px;
+  color: var(--twitter-color);
+}
+.sidebarMenu .MuiSvgIcon-root {
+  padding: 0 10px;
+}
+.sidebarMenu h2 {
+  font-size: 20px;
+  margin-right: 20px;
+  font-weight: 900;
+}
