@@ -1,3 +1,7 @@
+import { forwardRef } from 'react'
+import '../css/TweetPost.css'
+import { Avatar } from '@mui/material'
+
 import {
   ChatBubbleOutline,
   FavoriteBorder,
@@ -6,22 +10,12 @@ import {
   VerifiedUser,
 } from '@mui/icons-material'
 
-import '../css/TweetPost.css'
-import { Avatar } from '@mui/material'
-
-const TweetPost = (props) => {
-
-  const {
-    displayName,
-    userName,
-    verified,
-    text,
-    avatar,
-    image
-  } = props
+// eslint-disable-next-line react/display-name
+const TweetPost = forwardRef((props, ref) => {
+  const { displayName, userName, verified, text, avatar, image } = props
 
   return (
-    <div className="tweetPost">
+    <div className="tweetPost"ref={ref}>
       <div className="tweetPost__avatar">
         <Avatar src={avatar} />
       </div>
@@ -30,15 +24,16 @@ const TweetPost = (props) => {
           <div className="tweetPost__header-text">
             <h3 className="tweetPost__header-title">{displayName}</h3>
             <span className="tweetPost__header-special">
-              <VerifiedUser verified={verified} className="tweetPost__badge" />
-              @{userName}
+              <VerifiedUser verified={verified.toString()} className="tweetPost__badge" />@
+              {userName}
             </span>
           </div>
           <div className="tweetPost__header-Desc">
             <p>{text}</p>
           </div>
         </div>
-        <img src={image} alt="画像" />
+        {/* alt属性有りだと入力していないのに画像が出てくる */}
+        <img src={image} />
         <div className="tweetPost__footer">
           <ChatBubbleOutline fontSize="small" />
           <Repeat fontSize="small" />
@@ -48,6 +43,6 @@ const TweetPost = (props) => {
       </div>
     </div>
   )
-}
+})
 
 export default TweetPost

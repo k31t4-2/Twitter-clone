@@ -12,6 +12,7 @@ module.exports = {
   settings: { react: { version: '18.2' } },
   plugins: ['react-refresh'],
   rules: {
+    "react/prop-types":"off", //自分で追加した項目
     'react-refresh/only-export-components': [
       'warn',
       { allowConstantExport: true },
