@@ -1,4 +1,3 @@
-import React from 'react'
 import TwitterIcon from '@mui/icons-material/Twitter'
 import SidebarMenu from './SidebarMenu'
 import HomeIcon from '@mui/icons-material/Home'
@@ -20,7 +19,7 @@ const Sidebar = () => {
       <TwitterIcon className="sidebar__twitterIcon" />
 
       {/* propsを渡していく */}
-      <SidebarMenu text="HOME" Icon={HomeIcon} />
+      <SidebarMenu text="HOME" Icon={HomeIcon} active/>
       <SidebarMenu text="話題を検索" Icon={ZoomOutIcon} />
       <SidebarMenu text="通知" Icon={NotificationsIcon} />
       <SidebarMenu text="メッセージ" Icon={EmailIcon} />
